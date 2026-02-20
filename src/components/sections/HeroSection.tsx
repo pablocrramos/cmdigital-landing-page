@@ -1,5 +1,7 @@
 import { Container } from "../layout/Container";
+import { InlineSection } from "../layout/InlineSection";
 import { Section } from "../layout/Section";
+import { ComponentCard } from "../molecules";
 
 interface HeroSectionProps {
   title?: string;
@@ -30,6 +32,11 @@ export function HeroSection({
             </p>
           </div>
         </div>
+      </Container>
+      <Container>
+        <InlineSection name_section="hero-design">
+          <ComponentCard>Hello World</ComponentCard>
+        </InlineSection>
       </Container>
     </Section>
   );
