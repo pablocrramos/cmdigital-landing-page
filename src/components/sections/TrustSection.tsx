@@ -8,19 +8,17 @@ interface TrustSectionProps {
 
 export function TrustSection({
   title = "Confiados por marcas que construyen el futuro",
-  logoCount = 6,
+  logoCount = 8,
 }: TrustSectionProps) {
   return (
-    <Section className="py-12">
+    <Section className="py-6">
       <Container>
-        <p className="mb-8 text-center text-sm text-muted-foreground">
-          {title}
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+        <p className="mb-8 text-center text-sm text-muted-foreground">{title}</p>
+        <div className="grid w-full gap-3 grid-cols-[repeat(8,1fr)] grid-rows-[1fr]">
           {Array.from({ length: logoCount }).map((_, i) => (
             <div
               key={i}
-              className="h-8 w-24 rounded bg-muted"
+              className="flex w-full items-center justify-center rounded-md border border-(--card-border) bg-card py-4"
               aria-label={`Logo ${i + 1}`}
             />
           ))}

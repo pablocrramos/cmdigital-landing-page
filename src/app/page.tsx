@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/organisms";
-import { HeroSection } from "@/components/sections";
+import { HeroSection, TrustSection } from "@/components/sections";
 
 export default function Home() {
   return (
@@ -8,8 +8,8 @@ export default function Home() {
       <Navbar />
       <main>
         <HeroSection />
-        {/* <TrustSection />
-    <FeaturesSection /> */}
+        <TrustSection />
+        {/* <FeaturesSection />  */}
       </main>
     </>
   );

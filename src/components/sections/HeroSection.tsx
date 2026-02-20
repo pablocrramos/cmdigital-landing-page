@@ -34,7 +34,7 @@ export function HeroSection({
         </div>
       </Container>
       <Container>
-        <InlineSection name_section="hero-design">
+        <InlineSection name_section="hero-design" className="md:pb-0!">
           <ComponentCard>Hello World</ComponentCard>
         </InlineSection>
       </Container>
