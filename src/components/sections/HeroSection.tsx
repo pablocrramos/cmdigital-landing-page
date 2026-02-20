@@ -25,7 +25,7 @@ export function HeroSection({
               {title}
             </h1>
             <p
-              className="font-sans font-normal tracking-tight text-muted-foreground"
+              className="font-sans font-normal tracking-tight text-foreground"
               style={{ fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)" }}
             >
               {subtitle}

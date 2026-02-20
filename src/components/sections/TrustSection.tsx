@@ -13,8 +13,14 @@ export function TrustSection({
   return (
     <Section className="py-6">
       <Container>
-        <p className="mb-8 text-center text-sm text-muted-foreground">{title}</p>
-        <div className="grid w-full gap-3 grid-cols-[repeat(8,1fr)] grid-rows-[1fr]">
+        <p
+          className="mb-8 text-center text-foreground"
+          style={{ fontSize: "clamp(0.875rem, 1.5vw, 1.125rem)" }}
+        >
+          {title}
+        </p>
+        <div className="grid w-full gap-3 grid-cols-[repeat(auto-fill,minmax(9rem,1fr))]">
+          {" "}
           {Array.from({ length: logoCount }).map((_, i) => (
             <div
               key={i}
