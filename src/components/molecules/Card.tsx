@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ArrowLink } from "@/components/atoms/ArrowLink";
 
-interface CardGhostLink {
+export interface CardGhostLink {
   href: string;
   label: string;
 }

@@ -11,7 +11,7 @@ export function TrustSection({
   logoCount = 8,
 }: TrustSectionProps) {
   return (
-    <Section className="py-6">
+    <Section>
       <Container>
         <p
           className="mb-8 text-center text-foreground"
