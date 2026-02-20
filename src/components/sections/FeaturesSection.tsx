@@ -30,7 +30,7 @@ const defaultFeatures: Feature[] = [
 
 export function FeaturesSection({ features = defaultFeatures }: FeaturesSectionProps) {
   return (
-    <Section name_section="features" className="pt-0!">
+    <Section name_section="features" className="pt-14!">
       <Container className="space-y-16 md:space-y-24">
         {features.map((feature, index) => (
           <Card

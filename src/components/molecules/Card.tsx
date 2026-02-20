@@ -18,12 +18,11 @@ export function Card({ title, description, ghostLink, children, className }: Car
   return (
     <div
       className={cn(
-        "grid grid-cols-3 w-full h-full overflow-hidden rounded-xl bg-card border border-(--card-border)",
+        "grid grid-cols-3 w-full h-full overflow-hidden rounded-md bg-card border border-(--card-border)",
         className
       )}
     >
       <div className="col-span-2">{children}</div>
-
       <div className="col-span-1 flex flex-col gap-4 p-6">
         <h3 className="font-heading font-semibold text-xl">{title}</h3>
         <p className="text-muted-foreground text-sm">{description}</p>
