@@ -1,5 +1,11 @@
 import { AnnouncementBar, Navbar } from "@/components/organisms";
-import { FeaturesSection, HeroSection, Services, TrustSection } from "@/components/sections";
+import {
+  FeaturesSection,
+  HeroSection,
+  MetricsSection,
+  Services,
+  TrustSection,
+} from "@/components/sections";
 
 export default function Home() {
   return (
@@ -11,6 +17,7 @@ export default function Home() {
         <TrustSection />
         <FeaturesSection />
         <Services />
+        <MetricsSection />
       </main>
     </>
   );

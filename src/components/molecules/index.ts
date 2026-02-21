@@ -4,3 +4,7 @@ export { Placeholder } from "./Placeholder";
 export { FeatureBlock } from "./FeatureBlock";
 export { ServiceCard } from "./ServiceCard";
 export type { ServiceCardProps } from "./ServiceCard";
+export { BrandCard } from "./BrandCard";
+export type { BrandCardProps } from "./BrandCard";
+export { StatCard } from "./StatCard";
+export type { StatCardProps } from "./StatCard";
