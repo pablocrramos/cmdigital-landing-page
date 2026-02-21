@@ -1,7 +1,6 @@
-import { ArrowLink } from "../atoms/ArrowLink";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
-import { Placeholder } from "../molecules";
+import { ServiceCard } from "../molecules";
 
 interface Service {
   title: string;
@@ -56,22 +55,12 @@ export function Services({
         {/* Cards grid */}
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <div
+            <ServiceCard
               key={index}
-              className="flex flex-col overflow-hidden rounded-md border border-(--card-border) bg-card"
-            >
-              {/* Text content */}
-              <div className="flex flex-col gap-4 p-6">
-                <h3 className="font-heading font-semibold text-lg">{service.title}</h3>
-                <p className="text-sm text-muted-foreground">{service.description}</p>
-                <ArrowLink href={service.link.href}>{service.link.label}</ArrowLink>
-              </div>
-
-              {/* Visual slot */}
-              <div className="mx-4 mb-4 flex-1">
-                <Placeholder aspectRatio="video" className="h-full min-h-64" />
-              </div>
-            </div>
+              title={service.title}
+              description={service.description}
+              link={service.link}
+            />
           ))}
         </div>
       </Container>
