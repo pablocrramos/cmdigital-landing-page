@@ -1,4 +1,4 @@
-import { AnnouncementBar, Navbar } from "@/components/organisms";
+import { AnnouncementBar, Footer, Navbar } from "@/components/organisms";
 import {
   FeaturesSection,
   HeroSection,
@@ -6,6 +6,7 @@ import {
   Services,
   TrustSection,
 } from "@/components/sections";
+import { AdditionalFeatSection } from "@/components/sections/Additionals";
 
 export default function Home() {
   return (
@@ -18,7 +19,9 @@ export default function Home() {
         <FeaturesSection />
         <Services />
         <MetricsSection />
+        <AdditionalFeatSection />
       </main>
+      <Footer />
     </>
   );
 }

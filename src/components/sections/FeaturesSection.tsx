@@ -3,13 +3,13 @@ import { Section } from "../layout/Section";
 import { Card } from "../molecules";
 import { CardGhostLink } from "../molecules/Card";
 
-interface Feature {
+export interface Feature {
   title: string;
   description: string;
   ghostLink: CardGhostLink;
 }
 
-interface FeaturesSectionProps {
+export interface FeaturesSectionProps {
   features?: Feature[];
 }
 
