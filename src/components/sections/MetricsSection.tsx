@@ -16,12 +16,12 @@ interface MetricsSectionProps {
 const defaultBrands: BrandCardProps[] = [
   {
     name: "Ricoh",
-    description: "Empresa líder en la industria de los equipos multifuncionales.",
+    description: "Líder en el mercado de impresoras y fotocopiadoras durante más de 80 años",
     logo: Ricoh,
   },
   {
     name: "Sharp",
-    description: "Empresa líder en la industria de los equipos multifuncionales.",
+    description: "Calidad única en electrónica por su calidad de gestión y reputación.",
     logo: Sharp,
   },
 ];
