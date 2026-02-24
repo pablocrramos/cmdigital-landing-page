@@ -1,7 +1,9 @@
+import Image from "next/image";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Card } from "../molecules";
 import { Feature } from "./FeaturesSection";
+import Reparacion from "../../img/stock/stock-reparacion.jpg";
 
 const AdditionalFeature: Feature = {
   title: "Refacciones, toner o reparacion de tu equipo de impresión?",
@@ -21,7 +23,14 @@ export function AdditionalFeatSection() {
           description={AdditionalFeature.description}
           ghostLink={AdditionalFeature.ghostLink}
         >
-          Image
+          <div className="relative h-full w-full rounded-sm overflow-hidden box-border border-2 border-muted">
+            <Image
+              src={Reparacion}
+              alt="Reparación de equipo de impresión"
+              fill
+              className="object-cover"
+            />
+          </div>
         </Card>
       </Container>
     </Section>
