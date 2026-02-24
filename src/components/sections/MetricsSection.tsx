@@ -1,6 +1,8 @@
 import { ArrowLink } from "../atoms/ArrowLink";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
+import Ricoh from "../../img/logos/ricoh.svg";
+import Sharp from "../../img/logos/sharp.svg";
 import { BrandCard, BrandCardProps, StatCard, StatCardProps } from "../molecules";
 
 interface MetricsSectionProps {
@@ -15,10 +17,12 @@ const defaultBrands: BrandCardProps[] = [
   {
     name: "Ricoh",
     description: "Empresa líder en la industria de los equipos multifuncionales.",
+    logo: Ricoh,
   },
   {
-    name: "Ricoh",
+    name: "Sharp",
     description: "Empresa líder en la industria de los equipos multifuncionales.",
+    logo: Sharp,
   },
 ];
 
