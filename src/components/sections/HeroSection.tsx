@@ -1,7 +1,7 @@
 import { Container } from "../layout/Container";
 import { InlineSection } from "../layout/InlineSection";
 import { Section } from "../layout/Section";
-import { ComponentCard } from "../molecules";
+import { Carousel } from "../molecules";
 
 interface HeroSectionProps {
   title?: string;
@@ -35,7 +35,20 @@ export function HeroSection({
       </Container>
       <Container>
         <InlineSection name_section="hero-design" className="md:pb-0!">
-          <ComponentCard>Hello World</ComponentCard>
+          <Carousel
+            items={[
+              <div className="w-full bg-green-500 text-white" key={1}>
+                1
+              </div>,
+              <div className="w-full bg-green-500 text-white" key={2}>
+                2
+              </div>,
+              <div className="w-full bg-green-500 text-white" key={3}>
+                3
+              </div>,
+            ]}
+            className="bg-blue-700 w-full h-48"
+          />
         </InlineSection>
       </Container>
     </Section>

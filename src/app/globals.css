@@ -127,6 +127,18 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Carousel: sm = full width (1 item), md+ = 35% per item, 32.5% peek on each side */
+:root {
+  --carousel-item-w: 100%;
+  --carousel-offset: 0%;
+}
+@media (min-width: 768px) {
+  :root {
+    --carousel-item-w: 35%;
+    --carousel-offset: 32.5%;
+  }
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

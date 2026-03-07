@@ -8,3 +8,5 @@ export { BrandCard } from "./BrandCard";
 export type { BrandCardProps } from "./BrandCard";
 export { StatCard } from "./StatCard";
 export type { StatCardProps } from "./StatCard";
+export { Carousel } from "./Carousel";
+export type { CarouselProps } from "./Carousel";
