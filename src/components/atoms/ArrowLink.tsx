@@ -17,7 +17,6 @@ export function ArrowLink({ href, children, className }: ArrowLinkProps) {
       )}
     >
       {children}
-      <span aria-hidden="true">→</span>
     </Link>
   );
 }

@@ -23,9 +23,11 @@ export function Card({ title, description, ghostLink, children, className }: Car
       )}
     >
       <div className="col-span-2 lg:px-5.5 lg:py-4.5">{children}</div>
-      <div className="col-span-1 flex flex-col gap-4 p-6">
-        <h3 className="font-heading font-semibold text-xl">{title}</h3>
-        <p className="text-muted-foreground text-sm">{description}</p>
+      <div className="col-span-1 flex flex-col p-6 justify-center">
+        <h3 className="font-heading font-medium text-2xl">{title}</h3>
+        <p className="font-heading font-normal text-2xl text-muted-foreground pb-4">
+          {description}
+        </p>
         <ArrowLink href={ghostLink.href}>{ghostLink.label}</ArrowLink>
       </div>
     </div>
