@@ -2,6 +2,8 @@ import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Card } from "../molecules";
 import { CardGhostLink } from "../molecules/Card";
+import { DocumentManagementMockup } from "../molecules/DocumentManagementMockup";
+import { PrinterDashboardMockup } from "../molecules/PrinterDashboardMockup";
 
 export interface Feature {
   title: string;
@@ -35,12 +37,12 @@ export function FeaturesSection({ features = defaultFeatures }: FeaturesSectionP
         {features.map((feature, index) => (
           <Card
             key={index}
-            className="min-h-225 md:min-h-200 lg:min-h-178"
+            className="min-h-100 md:min-h-88 lg:min-h-76"
             title={feature.title}
             description={feature.description}
             ghostLink={feature.ghostLink}
           >
-            Hello world
+            {index === 0 ? <DocumentManagementMockup /> : <PrinterDashboardMockup />}
           </Card>
         ))}
       </Container>

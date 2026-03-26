@@ -18,37 +18,19 @@ import { Menu } from "lucide-react";
 
 const serviciosItems = [
   {
-    label: "Desarrollo Web",
-    href: "#desarrollo-web",
-    description: "Sitios y aplicaciones a medida",
+    label: "Gestión Documental",
+    href: "/servicios/gestion-documental",
+    description: "Digitaliza, organiza y accede a tus documentos desde cualquier lugar",
   },
   {
-    label: "Diseño UI/UX",
-    href: "#diseno",
-    description: "Interfaces centradas en el usuario",
+    label: "Soluciones de Oficina",
+    href: "/servicios/soluciones-oficina",
+    description: "Equipos multifuncionales Ricoh con servicio completo incluido",
   },
   {
-    label: "Consultoría",
-    href: "#consultoria",
-    description: "Estrategia y asesoramiento digital",
-  },
-];
-
-const nosotrosItems = [
-  {
-    label: "Equipo",
-    href: "#equipo",
-    description: "Conoce a las personas detrás del proyecto",
-  },
-  {
-    label: "Historia",
-    href: "#historia",
-    description: "Cómo empezamos y hacia dónde vamos",
-  },
-  {
-    label: "Valores",
-    href: "#valores",
-    description: "Lo que nos guía en cada decisión",
+    label: "Sistemas a la Medida",
+    href: "/servicios/sistemas-medida",
+    description: "Software y automatización adaptados a los procesos de tu empresa",
   },
 ];
 
@@ -59,7 +41,12 @@ interface NavbarProps {
 
 export function Navbar({ logo, className }: NavbarProps) {
   return (
-    <header className={cn("bg-background", className)}>
+    <header
+      className={cn(
+        "sticky top-0 z-40 border-b border-(--card-border) bg-background/95 backdrop-blur-sm",
+        className
+      )}
+    >
       <Container>
         <nav className="flex h-14 items-center justify-between">
           {/* Logo */}
@@ -77,13 +64,13 @@ export function Navbar({ logo, className }: NavbarProps) {
                     Servicios
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-background">
-                    <ul className="grid gap-0.5 p-0 w-64">
+                    <ul className="grid gap-0.5 p-0 w-72">
                       {serviciosItems.map((item) => (
                         <li key={item.href}>
                           <NavigationMenuLink asChild>
                             <Link
                               href={item.href}
-                              className="block rounded-md p-1 hover:text-muted-foreground transition-colors"
+                              className="block rounded-md p-2 hover:text-muted-foreground transition-colors"
                             >
                               <div className="text-sm font-normal font-heading">{item.label}</div>
                               <div className="text-xs text-muted-foreground mt-0.5">
@@ -99,38 +86,27 @@ export function Navbar({ logo, className }: NavbarProps) {
 
                 {/* Nosotros */}
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="px-6 text-sm text-foreground bg-transparent hover:text-muted-foreground data-[state=open]:text-muted-foreground">
-                    Nosotros
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent className="bg-background">
-                    <ul className="grid gap-1 p-0 w-64">
-                      {nosotrosItems.map((item) => (
-                        <li key={item.href}>
-                          <NavigationMenuLink asChild>
-                            <Link
-                              href={item.href}
-                              className="block rounded-md p-1 hover:text-muted-foreground transition-colors"
-                            >
-                              <div className="text-sm font-normal font-heading">{item.label}</div>
-                              <div className="text-xs text-muted-foreground mt-0.5">
-                                {item.description}
-                              </div>
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href="/nosotros"
+                      className={cn(
+                        navigationMenuTriggerStyle(),
+                        "px-6 text-sm text-foreground bg-transparent hover:bg-transparent hover:text-muted-foreground"
+                      )}
+                    >
+                      Nosotros
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
 
-                {/* Contacto (link simple) */}
+                {/* Contacto */}
                 <NavigationMenuItem>
                   <NavigationMenuLink asChild>
                     <Link
-                      href="#contacto"
+                      href="/contacto"
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "px-6 text-sm text-foreground hover:text-muted-foreground"
+                        "px-6 text-sm text-foreground bg-transparent hover:bg-transparent hover:text-muted-foreground"
                       )}
                     >
                       Contacto
@@ -144,11 +120,11 @@ export function Navbar({ logo, className }: NavbarProps) {
           {/* Right side */}
           <div className="flex items-center gap-2">
             <Button
-              variant="default"
-              size="xs"
-              className="hidden md:inline-flex text-sm rounded-md font-normal px-4 font-heading"
+              asChild
+              size="sm"
+              className="hidden md:inline-flex rounded-md font-heading font-normal"
             >
-              Login
+              <Link href="/contacto">Solicitar cotización</Link>
             </Button>
 
             {/* Mobile Menu */}
@@ -160,28 +136,36 @@ export function Navbar({ logo, className }: NavbarProps) {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-72">
-                <nav className="flex flex-col mt-32">
-                  <div>
-                    {serviciosItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-2 py-2 text-lg hover:text-muted-foreground text-foreground transition-colors"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-                  <div>
-                    {nosotrosItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        className="block px-2 py-2 text-lg hover:text-muted-foreground text-foreground transition-colors"
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
+                <nav className="flex flex-col mt-10 gap-1">
+                  <p className="px-2 py-1 text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                    Servicios
+                  </p>
+                  {serviciosItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-2 py-2 text-base hover:text-muted-foreground text-foreground transition-colors rounded-md hover:bg-card"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  <div className="my-2 border-t border-(--card-border)" />
+                  <Link
+                    href="/nosotros"
+                    className="block px-2 py-2 text-base hover:text-muted-foreground text-foreground transition-colors rounded-md hover:bg-card"
+                  >
+                    Nosotros
+                  </Link>
+                  <Link
+                    href="/contacto"
+                    className="block px-2 py-2 text-base hover:text-muted-foreground text-foreground transition-colors rounded-md hover:bg-card"
+                  >
+                    Contacto
+                  </Link>
+                  <div className="mt-4">
+                    <Button asChild className="w-full font-heading font-normal">
+                      <Link href="/contacto">Solicitar cotización</Link>
+                    </Button>
                   </div>
                 </nav>
               </SheetContent>
