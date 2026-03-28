@@ -62,7 +62,7 @@ export default function GestionDocumentalPage() {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="bg-[#1a2e45] text-white py-16 md:py-24">
+      <section className="bg-surface-dark text-white py-16 md:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="space-y-6">
@@ -212,7 +212,7 @@ export default function GestionDocumentalPage() {
       </Section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#1a2e45] py-16">
+      <section className="bg-surface-dark py-16">
         <Container>
           <div className="flex flex-col items-center text-center gap-6">
             <h2 className="font-heading font-medium text-white text-3xl max-w-lg">

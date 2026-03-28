@@ -78,7 +78,7 @@ export function DocumentManagementMockup() {
   return (
     <div className="flex flex-col h-full w-full rounded-l-md overflow-hidden select-none text-xs font-sans shadow-sm">
       {/* ── Header ── */}
-      <div className="flex items-center justify-between px-2.5 py-1.5 bg-[#1a2e45] text-white shrink-0">
+      <div className="flex items-center justify-between px-2.5 py-1.5 bg-surface-dark text-white shrink-0">
         <div className="flex items-center gap-1.5">
           <div className="w-4 h-4 rounded-sm bg-brand flex items-center justify-center shrink-0">
             <svg width="10" height="10" viewBox="0 0 12 12" fill="none">

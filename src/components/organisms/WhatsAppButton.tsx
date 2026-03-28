@@ -1,7 +1,6 @@
 "use client";
 
-// TODO: Reemplaza con el número real de WhatsApp de CM Digital (formato: 52 + código de área + número)
-const WHATSAPP_NUMBER = "528112345678";
+const WHATSAPP_NUMBER = "528115538428";
 const WHATSAPP_MESSAGE =
   "Hola, me interesa conocer más sobre los servicios de CM Digital. ¿Podrían darme información?";
 

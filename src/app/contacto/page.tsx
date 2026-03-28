@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 
-const WHATSAPP_NUMBER = "528112345678";
+const WHATSAPP_NUMBER = "528115538428";
 const SERVICES = [
   "Gestión Documental",
   "Renta de equipo multifuncional",
@@ -31,8 +31,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Teléfono",
-    value: "(81) XXXX-XXXX",
-    href: "tel:+528112345678",
+    value: "(81) 1553 8428 · (81) 1636 9486",
+    href: "tel:+528115538428",
   },
   {
     icon: (
@@ -51,8 +51,8 @@ const contactInfo = [
       </svg>
     ),
     label: "Correo",
-    value: "contacto@cmdigital.mx",
-    href: "mailto:contacto@cmdigital.mx",
+    value: "admcm@cmmonterrey.com",
+    href: "mailto:admcm@cmmonterrey.com",
   },
   {
     icon: (
@@ -72,7 +72,7 @@ const contactInfo = [
       </svg>
     ),
     label: "Ubicación",
-    value: "Monterrey, Nuevo León",
+    value: "Monterrey Centro, Nuevo León",
     href: "#",
   },
   {
@@ -128,7 +128,7 @@ export default function ContactoPage() {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="bg-[#1a2e45] text-white py-16 md:py-20">
+      <section className="bg-surface-dark text-white py-16 md:py-20">
         <Container>
           <div className="max-w-2xl space-y-4">
             <p className="text-sm text-white/60 font-heading uppercase tracking-widest">Contacto</p>
@@ -192,7 +192,7 @@ export default function ContactoPage() {
                     <label className={labelClass}>Teléfono</label>
                     <input
                       type="tel"
-                      placeholder="(81) XXXX-XXXX"
+                      placeholder="(81) 1234 5678"
                       value={telefono}
                       onChange={(e) => setTelefono(e.target.value)}
                       className={inputClass}

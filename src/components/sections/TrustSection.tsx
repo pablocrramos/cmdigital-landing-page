@@ -49,7 +49,7 @@ export function TrustSection({
           {logos.map((logo) => (
             <div
               key={logo.alt}
-              className="flex items-center justify-center rounded-md border border-(--card-border) bg-card px-5 py-5"
+              className="flex items-center justify-center rounded-xl border border-(--card-border) bg-card px-5 py-5"
             >
               <div className="relative h-8 w-full">
                 <Image

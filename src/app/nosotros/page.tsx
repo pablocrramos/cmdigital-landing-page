@@ -151,7 +151,7 @@ export default function NosotrosPage() {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="bg-[#1a2e45] text-white py-16 md:py-24">
+      <section className="bg-surface-dark text-white py-16 md:py-24">
         <Container>
           <div className="max-w-2xl space-y-4">
             <p className="text-sm text-white/60 font-heading uppercase tracking-widest">Nosotros</p>
@@ -371,7 +371,7 @@ export default function NosotrosPage() {
       </Section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#1a2e45] py-16">
+      <section className="bg-surface-dark py-16">
         <Container>
           <div className="flex flex-col items-center text-center gap-6">
             <h2 className="font-heading font-medium text-white text-3xl max-w-xl">

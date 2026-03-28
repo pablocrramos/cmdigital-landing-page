@@ -9,7 +9,7 @@ export interface BrandCardProps {
 
 export function BrandCard({ description, logo }: BrandCardProps) {
   return (
-    <div className="flex flex-col rounded-md border border-(--card-border) bg-card p-6 min-h-50">
+    <div className="flex flex-col rounded-2xl border border-(--card-border) bg-card p-6 min-h-50">
       <div className="flex-1">
         {logo ? (
           <div className="relative h-10 w-full">

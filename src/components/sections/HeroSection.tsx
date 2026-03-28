@@ -19,9 +19,9 @@ export function HeroSection({
   subtitle = "CM Digital es tu aliado con equipos multifuncionales Ricoh, gestión documental y sistemas a la medida — todo con servicio completo incluido.",
 }: HeroSectionProps) {
   return (
-    <Section>
+    <Section className="py-20 md:py-28">
       <Container>
-        <div className="grid gap-8 md:grid-cols-2 lg:items-center">
+        <div className="grid gap-10 md:grid-cols-2 lg:items-center">
           {/* Content */}
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-(--card-border) bg-card px-3 py-1 text-xs text-muted-foreground">

@@ -10,6 +10,10 @@
   --color-background-muted: var(--background-muted);
   --color-brand: var(--brand);
   --color-brand-foreground: var(--brand-foreground);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-dark-card: var(--surface-dark-card);
+  --color-surface-dark-border: var(--surface-dark-border);
+  --color-surface-dark-muted: var(--surface-dark-muted);
   --font-sans: var(--font-roboto);
   --font-heading: var(--font-archivo);
 
@@ -64,6 +68,10 @@
   --card: #f2f1ed;
   --card-foreground: #dfd0d0;
   --card-border: #e5e3de;
+  --surface-dark: #580404;
+  --surface-dark-card: oklch(0.18 0.005 25);
+  --surface-dark-border: oklch(0.25 0.005 25);
+  --surface-dark-muted: oklch(0.55 0.01 25);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
   --primary: rgb(23, 23, 23);

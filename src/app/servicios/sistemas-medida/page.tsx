@@ -155,7 +155,7 @@ export default function SistemasMedidaPage() {
   return (
     <main>
       {/* ── Hero ── */}
-      <section className="bg-[#1a2e45] text-white py-16 md:py-24">
+      <section className="bg-surface-dark text-white py-16 md:py-24">
         <Container>
           <div className="grid gap-10 lg:grid-cols-2 lg:items-center">
             <div className="space-y-6">
@@ -304,7 +304,7 @@ export default function SistemasMedidaPage() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-xl bg-[#1a2e45] p-8 space-y-6 text-white">
+            <div className="rounded-xl bg-surface-dark p-8 space-y-6 text-white">
               <h3 className="font-heading font-semibold text-lg">¿Por dónde empezar?</h3>
               <p className="text-white/70 text-sm leading-relaxed">
                 Una consulta de diagnóstico de 30 minutos es suficiente para entender tus
@@ -335,7 +335,7 @@ export default function SistemasMedidaPage() {
       </Section>
 
       {/* ── CTA ── */}
-      <section className="bg-[#1a2e45] py-16">
+      <section className="bg-surface-dark py-16">
         <Container>
           <div className="flex flex-col items-center text-center gap-6">
             <h2 className="font-heading font-medium text-white text-3xl max-w-lg">

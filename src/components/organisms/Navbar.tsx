@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { Container } from "../layout/Container";
 import { Button } from "../ui/button";
@@ -15,6 +16,8 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import NavLogoMobile from "@/img/nav-icons/nav-mobile.svg";
+import NavLogoWeb from "@/img/nav-icons/nav-web.svg";
 
 const serviciosItems = [
   {
@@ -50,8 +53,17 @@ export function Navbar({ logo, className }: NavbarProps) {
       <Container>
         <nav className="flex h-14 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-xl font-heading font-semibold">
-            {logo ?? "( CM Digital )"}
+          <Link href="/" className="block">
+            {logo ?? (
+              <>
+                <Image
+                  src={NavLogoMobile}
+                  alt="CM Digital"
+                  className="block md:hidden h-7 w-auto"
+                />
+                <Image src={NavLogoWeb} alt="CM Digital" className="hidden md:block h-8 w-auto" />
+              </>
+            )}
           </Link>
 
           {/* Desktop Navigation */}
